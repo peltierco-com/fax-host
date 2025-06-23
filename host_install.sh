@@ -1,4 +1,6 @@
 #!/bin/bash
+#sudo hostnamectl set-hostname fax.localhost.lan
+#sudo reboot
 #sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
 
 #update
@@ -8,7 +10,7 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential libtiff-dev libtiff-tools ghostscript gawk sendmail \
+    build-essential libssl-dev libtiff-dev libtiff-tools ghostscript gawk sendmail \
     socat supervisor
 
 #install docker
