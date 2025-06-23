@@ -2,10 +2,10 @@
 #curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/modem_install.sh | bash
 
 #git clone
-cd ~
-rm -rf ./fax-modem -y
+cd /home/admin
+rm -rf /home/admin/fax-modem && /
 git clone https://github.com/peltierco-com/fax-modem.git
-cd ./fax-modem/ubuntu/
 
 #docker build
+cd /home/admin/fax-modem/ubuntu
 docker build -t fax-modem:latest .
