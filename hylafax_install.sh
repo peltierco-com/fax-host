@@ -4,6 +4,6 @@ cd /usr/src/
 wget http://prdownloads.sourceforge.net/hylafax/hylafax-7.0.11.tar.gz?download -O hylafax-7.0.11.tar.gz
 tar -xzf hylafax-7.0.11.tar.gz
 cd hylafax-7.0.11
-./configure
-make
-make install
+#./configure
+#make
+#make install

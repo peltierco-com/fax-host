@@ -8,7 +8,8 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential socat
+    build-essential libtiff-dev libtiff-tools \
+    socat supervisor
 
 #install docker
 apt-get install ca-certificates curl -y
