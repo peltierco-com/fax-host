@@ -8,7 +8,7 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential libtiff-dev libtiff-tools \
+    build-essential libtiff-dev libtiff-tools ghostscript \
     socat supervisor
 
 #install docker
@@ -27,9 +27,10 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 cd /usr/src/
 wget http://prdownloads.sourceforge.net/hylafax/hylafax-7.0.11.tar.gz?download -O hylafax-7.0.11.tar.gz
 tar -xzf hylafax-7.0.11.tar.gz
-cd hylafax-7.0.11
+#cd /usr/src/hylafax-7.0.11
 #./configure
 #make
 #sudo make install
+#sudo faxsetup
 #sudo reboot
 
