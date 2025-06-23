@@ -20,4 +20,4 @@ apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 #set hostname
-hostnamectl set-hostname fax-host
+#hostnamectl set-hostname fax-host
