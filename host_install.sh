@@ -8,5 +8,4 @@ apt install -y \
     build-essential
 
 #set hostname
-hostnamectl set-hostname "fax" --static
-sleep 10s
+hostnamectl set-hostname fax-host
