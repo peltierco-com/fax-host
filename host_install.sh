@@ -9,3 +9,4 @@ apt install -y \
 
 #set hostname
 hostnamectl set-hostname "fax" --static
+sleep 10s
