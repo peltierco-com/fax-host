@@ -3,8 +3,8 @@
 
 #git clone
 cd ~
-rm -rf ./fax-modem && \
-git clone https://github.com/peltierco-com/fax-modem.git
+rm -rf ./fax-modem
+clone https://github.com/peltierco-com/fax-modem.git
 
 #docker build
 sudo usermod -aG docker $USER && newgrp docker
