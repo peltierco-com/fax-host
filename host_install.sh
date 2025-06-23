@@ -1,5 +1,10 @@
 #!/bin/bash
+
+#sudo -i
+#curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash
+
 #update
+dpkg-reconfigure debconf --frontend=noninteractive
 apt update
 apt upgrade -y
 
