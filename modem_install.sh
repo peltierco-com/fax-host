@@ -3,7 +3,7 @@
 
 #git clone
 cd ~
-rm -rf ~/fax-modem && /
+rm -rf ~/fax-modem && \
 git clone https://github.com/peltierco-com/fax-modem.git
 
 #docker build
