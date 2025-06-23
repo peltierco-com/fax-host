@@ -5,7 +5,7 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential 
+    build-essential
 
 #set hostname
 hostnamectl set-hostname "fax" --static
