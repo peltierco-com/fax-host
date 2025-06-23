@@ -9,6 +9,3 @@ apt install -y \
 
 #set hostname
 hostnamectl set-hostname "fax" --static
-
-#reboot
-systemctl reboot
