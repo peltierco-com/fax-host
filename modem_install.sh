@@ -7,5 +7,7 @@ rm -rf /home/admin/fax-modem && /
 git clone https://github.com/peltierco-com/fax-modem.git
 
 #docker build
+sudo usermod -aG docker $USER
+newgrp docker
 cd /home/admin/fax-modem/ubuntu
 docker build -t fax-modem:latest .
