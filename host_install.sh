@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#sudo -i
 #sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
 
 #update
