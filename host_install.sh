@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #sudo -i
-#curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash
+#sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
 
 #update
 export DEBIAN_FRONTEND=noninteractive
@@ -10,7 +10,7 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential
+    build-essential socat
 
 #install docker
 apt-get install ca-certificates curl -y
