@@ -8,7 +8,7 @@ apt upgrade -y
 
 #install packages
 apt install -y \
-    build-essential libtiff-dev libtiff-tools ghostscript \
+    build-essential libtiff-dev libtiff-tools ghostscript gawk \
     socat supervisor
 
 #install docker
