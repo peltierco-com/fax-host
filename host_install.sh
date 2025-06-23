@@ -30,5 +30,6 @@ tar -xzf hylafax-7.0.11.tar.gz
 cd hylafax-7.0.11
 #./configure
 #make
-#make install
+#sudo make install
+#sudo reboot
 
