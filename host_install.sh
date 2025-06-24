@@ -38,9 +38,9 @@ tar -zxvf afm-tar.Z --strip-components=1
 
 #install hylafax
 cd /usr/src/hylafax-7.0.11
-./configure
-make
-sudo make install
+./configure -nointeractive && make && make install
+
+#complete setup
 #sudo faxsetup
 #sudo reboot
 
