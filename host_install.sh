@@ -36,6 +36,7 @@ cd /var/lib/ghostscript/fonts
 wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
 tar -zxvf afm-tar.Z --strip-components=1
 
+#install hylafax
 cd /usr/src/hylafax-7.0.11
 ./configure
 make
