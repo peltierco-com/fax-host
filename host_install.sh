@@ -39,7 +39,7 @@ tar -zxvf afm-tar.Z --strip-components=1
 
 #install supervisord config
 #cd /etc/supervisor/conf.d
-#wget --backups=1 https://github.com/peltierco-com/fax-host/raw/refs/heads/main/hylafax-supervisord.conf
+#wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/hylafax-supervisord.conf
 
 #install hylafax
 cd /usr/src/hylafax-7.0.11
