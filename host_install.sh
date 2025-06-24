@@ -12,7 +12,7 @@ apt upgrade -y
 #install packages
 apt install -y \
     build-essential libssl-dev libtiff-dev libtiff-tools ghostscript gawk sendmail \
-    socat supervisor
+    supervisor
 
 #install docker
 apt-get install ca-certificates curl -y
