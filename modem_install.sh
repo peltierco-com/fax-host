@@ -7,6 +7,5 @@ rm -rf ~/fax-modem
 git clone https://github.com/peltierco-com/fax-modem.git
 
 #docker build
-sudo usermod -aG docker $USER && newgrp docker
 cd ~/fax-modem/docker
 docker compose up .
