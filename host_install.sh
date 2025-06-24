@@ -25,6 +25,7 @@ echo \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+usermod -aG docker admin
 
 #download hylafax
 cd /usr/src/
