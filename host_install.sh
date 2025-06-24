@@ -1,10 +1,11 @@
 #!/bin/bash
-#sudo hostnamectl set-hostname fax.localhost.lan
-#sudo reboot
 #sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
+export DEBIAN_FRONTEND=noninteractive
+
+#change hostname
+sudo hostnamectl set-hostname fax.localhost.lan
 
 #update
-export DEBIAN_FRONTEND=noninteractive
 apt update
 apt upgrade -y
 
@@ -33,12 +34,12 @@ tar -xzf hylafax-7.0.11.tar.gz
 #install missing fots
 cd /var/lib/ghostscript/fonts
 wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
-tar -zxvf afm-tar.Z
+tar -zxvf afm-tar.Z --strip-components=1
 
-#cd /usr/src/hylafax-7.0.11
-#./configure
-#make
-#sudo make install
+cd /usr/src/hylafax-7.0.11
+./configure
+make
+sudo make install
 #sudo faxsetup
 #sudo reboot
 
