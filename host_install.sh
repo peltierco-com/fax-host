@@ -29,6 +29,12 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 cd /usr/src/
 wget http://prdownloads.sourceforge.net/hylafax/hylafax-7.0.11.tar.gz?download -O hylafax-7.0.11.tar.gz
 tar -xzf hylafax-7.0.11.tar.gz
+
+#install missing fots
+cd /var/lib/ghostscript/fonts
+wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
+tar -zxvf afm-tar.Z
+
 #cd /usr/src/hylafax-7.0.11
 #./configure
 #make
