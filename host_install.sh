@@ -24,7 +24,7 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
+apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 usermod -aG docker admin
 
 #download hylafax
@@ -32,10 +32,14 @@ cd /usr/src/
 wget http://prdownloads.sourceforge.net/hylafax/hylafax-7.0.11.tar.gz?download -O hylafax-7.0.11.tar.gz
 tar -xzf hylafax-7.0.11.tar.gz
 
-#install missing fots
+#install missing fonts
 cd /var/lib/ghostscript/fonts
 wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
 tar -zxvf afm-tar.Z --strip-components=1
+
+#install supervisord config
+#cd /etc/supervisor/
+#wget --backups=1 https://github.com/peltierco-com/fax-host/raw/refs/heads/main/supervisord.conf
 
 #install hylafax
 cd /usr/src/hylafax-7.0.11
