@@ -1,5 +1,4 @@
 #!/bin/bash
-#sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
 export DEBIAN_FRONTEND=noninteractive
 
 #change hostname
