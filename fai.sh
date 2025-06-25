@@ -8,11 +8,6 @@ hostnamectl set-hostname fax.localhost.lan
 apt update
 apt upgrade -y
 
-#install packages
-apt install -y \
-    build-essential libssl-dev libtiff-dev libtiff-tools ghostscript gawk sendmail \
-    supervisor
-
 #install docker
 apt-get install ca-certificates curl -y
 install -m 0755 -d /etc/apt/keyrings
@@ -26,25 +21,4 @@ apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 usermod -aG docker admin
 
-#download hylafax
-cd /usr/src/
-wget http://prdownloads.sourceforge.net/hylafax/hylafax-7.0.11.tar.gz?download -O hylafax-7.0.11.tar.gz
-tar -xzf hylafax-7.0.11.tar.gz
-
-#install missing fonts
-cd /var/lib/ghostscript/fonts
-wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
-tar -zxvf afm-tar.Z --strip-components=1
-
-#install supervisord config
-cd /etc/supervisor/conf.d
-wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/hylafax-supervisord.conf
-
-#install hylafax
-cd /usr/src/hylafax-7.0.11
-./configure -nointeractive && make && make install
-
-#complete setup
-#sudo faxsetup
-#sudo reboot
 
