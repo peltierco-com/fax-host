@@ -1,4 +1,5 @@
 #!/bin/bash
+#curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/fai.sh | bash
 export DEBIAN_FRONTEND=noninteractive
 
 #change hostname
@@ -20,5 +21,3 @@ echo \
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 usermod -aG docker admin
-
-
