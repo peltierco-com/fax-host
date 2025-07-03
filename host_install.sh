@@ -1,5 +1,6 @@
 #!/bin/bash
 #sudo sh -c 'curl -s -L https://github.com/peltierco-com/fax-host/raw/refs/heads/main/host_install.sh | bash'
+DEBIAN_FRONTEND=noninteractive
 export PTLIB_VERSION="2.18.6"
 export GIT_PTLIB_VERSION="2_18_6"
 export OPAL_VERSION="3.18.6"
