@@ -16,7 +16,10 @@ hostnamectl set-hostname fax.localhost.lan
 #install packages
 apt update
 apt upgrade -y
-apt install -y g++ git make autoconf libpcap-dev libexpat1-dev libssl-dev libsasl2-dev libldap2-dev unixodbc-dev liblua5.3-dev libv8-dev libncurses-dev libsdl2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev pkg-config libsrtp2-dev libgsm1-dev libspeex-dev libopus-dev libx264-dev libvpx-dev libtheora-dev libspandsp-dev
+apt install -y g++ git make autoconf libpcap-dev libexpat1-dev libssl-dev libsasl2-dev libldap2-dev \
+    unixodbc-dev liblua5.3-dev libv8-dev libncurses-dev libsdl2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
+    pkg-config libsrtp2-dev libgsm1-dev libspeex-dev libopus-dev libx264-dev libvpx-dev libtheora-dev libspandsp-dev \
+    build-essential libssl-dev libtiff-dev libtiff-tools ghostscript gawk sendmail nano wget curl
 
 cd /usr/src/
 git clone --depth 1 -b "v${GIT_PTLIB_VERSION}" git://git.code.sf.net/p/opalvoip/ptlib
@@ -38,18 +41,14 @@ make install
 cd /usr/src/t38modem
 CPPFLAGS=-Wno-narrowing make USE_OPAL=1 USE_UNIX98_PTY=1
 
-#install missing fonts
-#cd /var/lib/ghostscript/fonts
-#wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
-#tar -zxvf afm-tar.Z --strip-components=1
-
-# #install supervisord config
-# cd /etc/supervisor/conf.d
-# wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/hylafax-supervisord.conf
+# install missing fonts
+cd /var/lib/ghostscript/fonts
+wget https://github.com/peltierco-com/fax-host/raw/refs/heads/main/afm-tar.Z
+tar -zxvf afm-tar.Z --strip-components=1
 
 # #install hylafax
-# cd /usr/src/hylafax-7.0.11
-# ./configure -nointeractive && make && make install
+cd /usr/src/hylafax-7.0.11
+./configure -nointeractive && make && make install
 
 #complete setup
 #sudo faxsetup
