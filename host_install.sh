@@ -21,7 +21,7 @@ echo LD_LIBRARY_PATH=/usr/local/lib >> /etc/environment
 echo PTLIBPLUGINDIR="/usr/local/lib/ptlib-${PTLIB_VERSION}:/usr/local/lib/opal-${OPAL_VERSION}" >> /etc/environment
 
 # change hostname
-#hostnamectl set-hostname fax.localhost.lan
+hostnamectl set-hostname fax.localhost.lan
 
 # install packages
 apt update
